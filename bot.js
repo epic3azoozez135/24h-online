@@ -1,4 +1,4 @@
-const adminprefix = ",";
+const adminprefix = "A";
 const developers = ['462038057529507841'];
 
 console.log("Randy ");
