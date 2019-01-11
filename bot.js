@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 const client = new Discord.Client();
-var prefix = "A"
+var prefix = "48"
 
 
 
@@ -57,5 +57,25 @@ client.on('message', function(message) {
         });
     }
 });
+
+
+
+
+client.on('message', msg => {
+
+    if (msg.content == 'Ajoin') {
+        if (msg.member.voiceChannel) {
+
+     if (msg.member.voiceChannel.joinable) {
+         msg.member.voiceChannel.join().then(msg.react('white_check_mark'));
+     }
+    }
+}
+})
+client.on('ready', () => {
+    client.channels.get("526941300260339742").join();
+    });
+
+
 
 client.login(process.env.BOT_TOKEN);
