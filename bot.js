@@ -67,13 +67,13 @@ client.on('message', msg => {
         if (msg.member.voiceChannel) {
 
      if (msg.member.voiceChannel.joinable) {
-         msg.member.voiceChannel.join().then(msg.react('white_check_mark'));
+         msg.member.voiceChannel.join().then(msg.react(':white_check_mark:'));
      }
     }
 }
 })
 client.on('ready', () => {
-    client.channels.get("527272789149745153").join();
+    client.channels.get("536187177910927371").join();
     });
 
 
